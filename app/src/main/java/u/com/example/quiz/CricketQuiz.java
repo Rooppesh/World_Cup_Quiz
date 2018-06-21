@@ -67,7 +67,7 @@ public class CricketQuiz extends AppCompatActivity {
                 updateScore(mScore);
                 //donutProgress.setProgress(0);
                 Toast.makeText(getApplicationContext(), "Time Up!", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getApplicationContext(), TopScorer.class);
+                Intent intent = new Intent(getApplicationContext(), TopScorerCric.class);
                 intent.putExtra("score", mScore); // pass the current score to the second screen
                 startActivity(intent);
 

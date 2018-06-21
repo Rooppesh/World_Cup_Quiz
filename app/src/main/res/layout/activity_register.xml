@@ -75,7 +75,7 @@
             android:clickable="true"
             android:layout_marginBottom="24dp"
             android:textColor="#ffffff"
-            android:text="Already a member? Login"
+            android:text="Already a Member? Login"
             android:gravity="center"
             android:textSize="16dip"/>
 

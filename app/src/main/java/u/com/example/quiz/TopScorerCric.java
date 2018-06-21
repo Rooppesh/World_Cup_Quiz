@@ -14,8 +14,7 @@ import android.widget.TextView;
 public class TopScorerCric extends AppCompatActivity {
     public int first,second,third;
     public String name = "Bhargav";
-    FloatingActionButton dashback,rank;
-    Button loga;
+    Button loga,dashback,rank;
     private SharedPreferences mypref123;
     @Override
     public void onBackPressed() {
@@ -37,12 +36,9 @@ public class TopScorerCric extends AppCompatActivity {
         Intent intent = getIntent();
         int score = intent.getIntExtra("score", 0);
         // display current score
-        button.setText(score+" pt");
+        button.setText(score+" Pts");
 
-
-        loga = (Button)findViewById(R.id.loga);
-        dashback = (FloatingActionButton)findViewById(R.id.backdash);
-        rank = (FloatingActionButton) findViewById(R.id.rank);
+        rank = (Button) findViewById(R.id.rank);
 
         // use Shared preferences to save the best score
         SharedPreferences mypref123 = getSharedPreferences("P1",0);
@@ -90,24 +86,11 @@ public class TopScorerCric extends AppCompatActivity {
         nsecond = mypref123.getString("nsc","no_player");
         nthird = mypref123.getString("ntc","no_player");
 
-        loga.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),MainActivity.class);
-                startActivityForResult(i,1);
-            }
-        });
-        dashback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),QuizDashboard.class);
-                startActivityForResult(i,1);
-            }
-        });
+
         rank.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),Main2Activity.class);
+                Intent i = new Intent(getApplicationContext(),QuizDashboard.class);
                 startActivityForResult(i,1);
             }
         });
