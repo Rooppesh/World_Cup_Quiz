@@ -34,9 +34,16 @@ public class Tab1Fragment extends Fragment {
         TextView fplace = (TextView)view.findViewById(R.id.first);
         TextView splace = (TextView)view.findViewById(R.id.second);
         TextView tplace = (TextView)view.findViewById(R.id.third);
-        fplace.setText("1."+nfirst+" "+first);
-        splace.setText("2."+nsecond+" "+second);
-        tplace.setText("3."+nthird+" "+third);
+        TextView fs = (TextView)view.findViewById(R.id.fis);
+        TextView ss = (TextView)view.findViewById(R.id.sec);
+        TextView ts = (TextView)view.findViewById(R.id.thi);
+
+        fplace.setText(nfirst);
+        splace.setText(nsecond);
+        tplace.setText(nthird);
+        fs.setText(String.valueOf(first));
+        ss.setText(String.valueOf(second));
+        ts.setText(String.valueOf(third));
 
         return view;
     }

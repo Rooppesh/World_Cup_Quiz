@@ -13,6 +13,13 @@
     tools:context=".CricketQuiz"
     android:orientation="vertical">
 
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:weightSum="4"
+    android:layout_height="match_parent">
     <TextView
         android:id="@+id/question"
         android:layout_width="match_parent"
@@ -26,7 +33,6 @@
         android:textAppearance="@android:style/TextAppearance.Holo.Large"
         android:textStyle="normal|bold"
         android:textColor="#FFF"
-        app:layout_constraintBottom_toTopOf="@+id/choice1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -42,28 +48,24 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/choice1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.899"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.986" />
-
-
-
     <Button
         android:id="@+id/choice1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="144dp"
-        android:background="#048579"
+        android:background="@drawable/roundedbutton"
         android:onClick="onClick"
         android:padding="8dp"
         android:text="A"
-        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textColor="#ffffff"
         app:layout_constraintBottom_toTopOf="@+id/choice2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,15 +74,16 @@
     <Button
         android:id="@+id/choice2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="#048579"
+        android:background="@drawable/roundedbutton"
         android:onClick="onClick"
         android:padding="8dp"
+        android:textSize="20dp"
         android:text="B"
-        android:textColor="#000000"
+        android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/choice1" />
@@ -88,15 +91,17 @@
     <Button
         android:id="@+id/choice3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="#048579"
         android:onClick="onClick"
         android:padding="8dp"
+        android:textSize="20dp"
+        android:background="@drawable/roundedbutton"
         android:text="C"
-        android:textColor="#000000"
+        android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/choice2" />
@@ -104,52 +109,35 @@
     <Button
         android:id="@+id/choice4"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="20dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="#048579"
+        android:background="@drawable/roundedbutton"
         android:onClick="onClick"
         android:padding="8dp"
         android:text="D"
-        android:textColor="#000000"
+        android:textColor="#ffffff"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/choice3"
         app:layout_constraintVertical_bias="0.0" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <TextView
+        android:id="@+id/score"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:orientation="vertical"
-        android:padding="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_height="0dp"
+        android:background="@android:color/holo_orange_light"
+        android:gravity="center_horizontal"
+        android:text="0/0"
 
-        <TextView
-            android:id="@+id/score_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/holo_orange_light"
-            android:gravity="center_horizontal"
-            android:text="Score:"
-            android:textAppearance="@android:style/TextAppearance.Holo.Medium" />
+        android:textAppearance="@android:style/TextAppearance.Large" />
 
-        <TextView
-            android:id="@+id/score"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/holo_orange_light"
-            android:gravity="center_horizontal"
-            android:text="0/0"
-            android:textAppearance="@android:style/TextAppearance.Large" />
+</LinearLayout>
 
-    </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>

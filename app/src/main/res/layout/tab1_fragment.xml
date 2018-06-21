@@ -20,39 +20,101 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
-        <ImageView android:src="@drawable/leaderboard"
-            android:layout_width="wrap_content"
-            android:layout_height="72dp"
-            android:layout_marginBottom="24dp"
-            android:layout_gravity="center_horizontal" />
-        <TextView
-            android:text="1."
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:id="@+id/first"
-            android:background="@android:color/holo_orange_light"
-            android:padding="@dimen/activity_vertical_margin"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+            android:layout_height="300dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/world"/>
 
-        <TextView
-            android:text="2."
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:padding="@dimen/activity_vertical_margin"
-            android:background="@color/colorAccent"
-            android:id="@+id/second"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
-        <TextView
-            android:text="3."
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+            <TextView
+                android:text="1."
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:id="@+id/first"
+                android:background="@android:color/holo_orange_light"
+                android:padding="@dimen/activity_vertical_margin"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/fis"
+                android:layout_margin="3dp"
+
+                android:background="@android:color/holo_orange_light"
+                android:padding="@dimen/activity_vertical_margin"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:text="0"/>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:padding="@dimen/activity_vertical_margin"
-            android:background="@color/colorPrimary"
-            android:id="@+id/third"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
-        <TextView
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+            <TextView
+                android:text="2."
+                android:layout_width="0dp"
+                android:layout_weight="3"                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_vertical_margin"
+                android:layout_margin="3dp"
+                android:background="#808080"
+                android:id="@+id/second"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/sec"
+                android:layout_margin="3dp"
+                android:background="#808080"
+                android:padding="@dimen/activity_vertical_margin"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:text="0"/>
+
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:text="3."
+                android:layout_width="0dp"
+                android:layout_weight="3"                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_vertical_margin"
+                android:layout_margin="3dp"
+                android:background="#cd7f32"
+                android:id="@+id/third"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/thi"
+                android:layout_margin="3dp"
+
+                android:background="#cd7f32"
+                android:padding="@dimen/activity_vertical_margin"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:text="0"/>
+
+        </LinearLayout>
+
+
+
 
 
 

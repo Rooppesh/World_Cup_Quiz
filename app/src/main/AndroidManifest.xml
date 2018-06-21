@@ -18,7 +18,6 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".QuizDashboard" />
         <activity android:name=".CricketQuiz" />
-        <activity android:name=".CompQuiz" />
         <activity android:name=".TopScorer" />
         <activity android:name=".TopScorerCric" />
         <activity

@@ -47,8 +47,8 @@ public class CricketQuiz extends AppCompatActivity {
         donutProgress = (DonutProgress) findViewById(R.id.doprogress);
         donutProgress.setMax(100);
         donutProgress.setSuffixText("s");
-        donutProgress.setFinishedStrokeColor(Color.parseColor("#FFFB385F"));
-        donutProgress.setTextColor(Color.parseColor("#FFFB385F"));
+        donutProgress.setFinishedStrokeColor(Color.parseColor("#ffffbb33"));
+        donutProgress.setTextColor(Color.parseColor("#ffffbb33"));
         donutProgress.setKeepScreenOn(true);
         mQuestionLibrary.initQuestions(getApplicationContext());
         updateQuestion();
