@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="9"
+
+    android:background="@android:color/black"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="56dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:background="@android:color/black"
+        android:layout_alignParentBottom="true">
+
+        <ImageView android:src="@drawable/world"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@android:color/black"
+            android:layout_weight="4"
+            android:layout_marginBottom="24dp"
+            android:layout_gravity="center_horizontal" />
+
+
+            <EditText
+                android:id="@+id/input_name"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:inputType="textCapWords"
+                android:hint="User Name"
+                android:textColorHint="#fff"
+                android:textColor="#FFF"
+                />
+
+
+            <EditText android:id="@+id/input_password2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"                android:inputType="textPassword"
+                android:textColor="#ffffff"
+                android:textColorHint="#fff"
+
+                android:hint="Password" />
+
+
+            <EditText android:id="@+id/input_password1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"                android:inputType="textPassword"
+                android:textColor="#ffffff"
+                android:textColorHint="#fff"
+
+                android:hint="Confirm Password"/>
+
+        <Button
+            android:id="@+id/btn_signup"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:padding="12dp"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            android:background="@drawable/roundedbutton"
+            android:text="Create Account"/>
+
+        <TextView android:id="@+id/link_login"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_marginBottom="24dp"
+            android:textColor="#ffffff"
+            android:text="Already a member? Login"
+            android:gravity="center"
+            android:textSize="16dip"/>
+
+    </LinearLayout>
+</LinearLayout>
