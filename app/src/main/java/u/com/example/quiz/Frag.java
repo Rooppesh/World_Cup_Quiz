@@ -9,8 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
-
 
 
 public class Frag extends Fragment {
@@ -22,7 +20,7 @@ public class Frag extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.tab1_fragment,container,false);
+        View view = inflater.inflate(R.layout.fragment,container,false);
         SharedPreferences mypref123 = this.getActivity().getSharedPreferences("P1",0);
         SharedPreferences.Editor editor1 = mypref123.edit();
         int first = mypref123.getInt("fc",0);

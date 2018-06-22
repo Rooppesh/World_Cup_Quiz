@@ -17,7 +17,7 @@ public class Dash extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_quiz_dashboard);
+        setContentView(R.layout.activity_dashboard);
         cric = (CardView)findViewById(R.id.cricketquiz);
         topscore = (CardView)findViewById(R.id.topscore);
         tech = (CardView) findViewById(R.id.logout);

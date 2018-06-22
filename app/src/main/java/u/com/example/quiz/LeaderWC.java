@@ -23,7 +23,7 @@ public class LeaderWC extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_top_scorer_cric);
+        setContentView(R.layout.activity_score);
         Button button = (Button)findViewById(R.id.play_buttoncric);
         //TextView txtScore = (TextView) findViewById(R.id.textScore);
         //TextView fplace = (TextView) findViewById(R.id.first);
