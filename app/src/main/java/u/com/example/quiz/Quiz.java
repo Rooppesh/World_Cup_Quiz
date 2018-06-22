@@ -1,11 +1,16 @@
 package u.com.example.quiz;
 
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -32,7 +37,6 @@ public class Quiz extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_quiz);
         mScoreView = (TextView)findViewById(R.id.score);
         mQuestionView = (TextView)findViewById(R.id.question);
@@ -40,38 +44,17 @@ public class Quiz extends AppCompatActivity {
         mButtonChoice2 = (Button)findViewById(R.id.choice2);
         mButtonChoice3 = (Button)findViewById(R.id.choice3);
         mButtonChoice4 = (Button)findViewById(R.id.choice4);
-        donutProgress = (DonutProgress) findViewById(R.id.doprogress);
-        donutProgress.setMax(100);
-        donutProgress.setSuffixText("s");
-        donutProgress.setFinishedStrokeColor(Color.parseColor("#ffffbb33"));
-        donutProgress.setTextColor(Color.parseColor("#ffffbb33"));
-        donutProgress.setKeepScreenOn(true);
+
         mQuestionLibrary.initQuestions(getApplicationContext());
         updateQuestion();
-        t =new CountDownTimer(50000, 1000) {//countdowntimer
-            int i = 100;
-            @Override
-            public void onTick(long millisUntilFinished) {
-                i = i - 2;
-                donutProgress.setProgress(i);
-
-
-            }
-
-            @Override
-            public void onFinish() {
-                updateScore(mScore);
-                //donutProgress.setProgress(0);
-                Intent intent = new Intent(getApplicationContext(), LeaderWC.class);
-                intent.putExtra("score", mScore); // pass the current score to the second screen
-                startActivity(intent);
-
-            }
-
-        }.start();
         // show current total score for the user
 
 
+    }
+    public void onBackPressed() {
+        Log.d("CDA", "onBackPressed Called");
+        Intent setIntent = new Intent(getApplicationContext(),LeaderWC.class);
+        startActivity(setIntent);
     }
     private void updateQuestion(){
         // check if we are not outside array bounds for questions
@@ -90,7 +73,6 @@ public class Quiz extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), LeaderWC.class);
             intent.putExtra("score", mScore); // pass the current score to the second screen
             startActivity(intent);
-            t.cancel();
         }
     }
     private void updateScore(int point) {
@@ -105,7 +87,7 @@ public class Quiz extends AppCompatActivity {
             mScore = mScore + 1;
             Toast.makeText(getApplicationContext(), "Correct!", Toast.LENGTH_SHORT).show();
         }else {
-            Toast.makeText(getApplicationContext(), "Wrong! ", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Wrong!", Toast.LENGTH_SHORT).show();
         }// show current total score for the user
         updateScore(mScore);
         // once user answer the question, we move on to the next one, if any
