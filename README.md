@@ -1,5 +1,7 @@
 # World_Cup_Quiz
 Since, it's World Cup season and CTF wanted us to make a Quiz App. 
+
+The screenshots and the apk files have been attached along with this repository. 
 <br />
 ## Specification
 ```
