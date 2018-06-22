@@ -2,12 +2,12 @@
 Since, it's World Cup season and CTF wanted us to make a Quiz App. 
 <br />
 ## Screenshots
-Login: <br />
+<b>Login:</b> <br />
 <img src="https://github.com/Rooppesh/World_Cup_Quiz/blob/master/Screenshots/Login.jpg" height="426.666666667" width="240">
 <br />
 Signup: <br />
-<img src="https://github.com/Rooppesh/World_Cup_Quiz/blob/master/Screenshots/Signup.jpg" height="640" width="360">
+<img src="https://github.com/Rooppesh/World_Cup_Quiz/blob/master/Screenshots/Signup.jpg" height="426.666666667" width="240">
 <br />
 Dashboard: <br />
-<img src="https://github.com/Rooppesh/World_Cup_Quiz/blob/master/Screenshots/Dashboard.jpg" height="640" width="360">
+<img src="https://github.com/Rooppesh/World_Cup_Quiz/blob/master/Screenshots/Dashboard.jpg" height="426.666666667" width="240">
 <br />
