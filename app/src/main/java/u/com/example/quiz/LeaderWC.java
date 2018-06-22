@@ -12,8 +12,7 @@ import android.widget.Button;
 
 public class LeaderWC extends AppCompatActivity {
     public int first,second,third;
-    public String name = "Bhargav";
-    Button loga,dashback,rank;
+    Button rank;
     private SharedPreferences mypref123;
     @Override
     public void onBackPressed() {
@@ -27,24 +26,17 @@ public class LeaderWC extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-//        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-//                WindowManager.LayoutParams.FLAG_FULLSCREEN);//int flag, int mask
+//
         setContentView(R.layout.activity_score);
 
         Button button = (Button)findViewById(R.id.play_buttoncric);
-        //TextView txtScore = (TextView) findViewById(R.id.textScore);
-        //TextView fplace = (TextView) findViewById(R.id.first);
-        //TextView splace = (TextView)findViewById(R.id.second);
-        //TextView tplace = (TextView)findViewById(R.id.third);
-        // receive the score from last activity by Intent
+
         Intent intent = getIntent();
         int score = intent.getIntExtra("score", 0);
-        // display current score
         button.setText(score+" Pts");
 
         rank = (Button) findViewById(R.id.rank);
 
-        // use Shared preferences to save the best score
         SharedPreferences mypref123 = getSharedPreferences("P1",0);
         SharedPreferences.Editor editor1 = mypref123.edit();
         editor1.putInt("yourscoreckt",score);
@@ -54,7 +46,6 @@ public class LeaderWC extends AppCompatActivity {
 
 
         String cur_user = mypref123.getString("user","a");
-        Log.d("name",cur_user);
 
         String nfirst = mypref123.getString("nfc","no_player");
         String nsecond = mypref123.getString("nsc","no_player");
@@ -99,8 +90,5 @@ public class LeaderWC extends AppCompatActivity {
             }
         });
 
-        //fplace.setText("1."+nfirst+" "+first);
-        //splace.setText("2."+nsecond+" "+second);
-        //tplace.setText("3."+nthird+" "+third);
     }
 }

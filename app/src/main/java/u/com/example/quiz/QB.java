@@ -7,28 +7,17 @@ import java.util.List;
 
 public class QB {
 
-    // declare list of Question objects
     List <Question> list = new ArrayList<>();
     DBWorldCup myDataBaseHelper;
-
-    // method returns number of questions in list
     public int getLength(){
         return list.size();
     }
-
-    // method returns question from list based on list index
     public String getQuestion(int a) {
         return list.get(a).getQuestion();
     }
-
-    // method return a single multiple choice item for question based on list index,
-    // based on number of multiple choice item in the list - 1, 2, 3 or 4
-    // as an argument
     public String getChoice(int index, int num) {
         return list.get(index).getChoice(num-1);
     }
-
-    //  method returns correct answer for the question based on list index
     public String getCorrectAnswer(int a) {
         return list.get(a).getAnswer();
     }
@@ -50,9 +39,7 @@ public class QB {
                     new String[]{"Africa", "Asia", "Australia/Oceania", "North America"}, "Australia/Oceania"));
             myDataBaseHelper.addInitialQuestion(new Question("One of these South American teams never became a world champion",
                     new String[]{"Brazil", "Argentina", "Chile", "Uruguay"}, "Chile"));
-
-            list = myDataBaseHelper.getAllQuestionsList();//get list from database again
-
+            list = myDataBaseHelper.getAllQuestionsList();
         }
     }
 

@@ -20,11 +20,6 @@ public class RegisterActivity extends AppCompatActivity{
     public TextView log;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        requestWindowFeature(Window.FEATURE_NO_TITLE);
-//        //code that displays the content in full screen mode
-//        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-//                WindowManager.LayoutParams.FLAG_FULLSCREEN);//int flag, int mask
-
         setContentView(R.layout.activity_register);
         db = new DBHelper(this);
         name1= (EditText)findViewById(R.id.input_name);
