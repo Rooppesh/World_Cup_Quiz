@@ -27,5 +27,5 @@ targetSdkVersion 27
 <img src="https://github.com/Rooppesh/World_Cup_Quiz/blob/master/Screenshots/Score.jpg" height="426.666666667" width="240">
 <br />
 <b>Leaderboard:</b> <br />
-<img src="https://github.com/Rooppesh/World_Cup_Quiz/blob/master/Screenshots/Leaderboard.jpg" height="426.666666667" width="240">
+<img src="https://github.com/Rooppesh/World_Cup_Quiz/blob/master/Screenshots/Leader.jpg" height="426.666666667" width="240">
 <br />
