@@ -40,16 +40,18 @@ public class QB {
         list = myDataBaseHelper.getAllQuestionsList();//get questions/choices/answers from database
 
         if (list.isEmpty()) {//if list is empty, populate database with default questions/choices/answers
-            myDataBaseHelper.addInitialQuestion(new Question("India played it's first Test cricket match against?",
-                    new String[]{"England", "Pakistan", "Australia", "South Africa"}, "England"));
-            myDataBaseHelper.addInitialQuestion(new Question("India played its first T20 match against?",
-                    new String[]{"Pakistan", "South Africa", "Afghanistan", "England"}, "South Africa"));
-            myDataBaseHelper.addInitialQuestion(new Question("Pakistan's contribution to world cricket is: ",
-                    new String[]{"No-Ball", "Run Out", "Reverse Swing", "LBW"}, "Reverse Swing"));
-            myDataBaseHelper.addInitialQuestion(new Question("The nickname of Glenn McGrath is what?",
-                    new String[]{"Ooh Aah", "Pigeon", "Big Bird", "Penguin"}, "Pigeon"));
-            myDataBaseHelper.addInitialQuestion(new Question("What name is given to the score 111 in cricket?",
-                    new String[]{"Nelson", "Stump", "Macro", "Pony"}, "Nelson"));
+            myDataBaseHelper.addInitialQuestion(new Question("Which African country was the first to compete in a Football World Cup?",
+                    new String[]{"Cameroon", "Eygpt", "South Africa", "Tunisia"}, "Eygpt"));
+            myDataBaseHelper.addInitialQuestion(new Question("Which country won most World cups?",
+                    new String[]{"Argentina", "Brazil", "Germany", "Italy"}, "Brazil"));
+            myDataBaseHelper.addInitialQuestion(new Question("\n" +
+                    "Where was the first World cup held?",
+                    new String[]{"Argentina", "Brazil", "England", "Uruguay"}, "Uruguay"));
+            myDataBaseHelper.addInitialQuestion(new Question("World cup was never held in one of these continents",
+                    new String[]{"Africa", "Asia", "Australia/Oceania", "\n" +
+                            "North America"}, "Australia/Oceania"));
+            myDataBaseHelper.addInitialQuestion(new Question("One of these South American teams never became a world champion",
+                    new String[]{"Brazil", "Argentina", "Chile", "Uruguay"}, "Chile"));
 
             list = myDataBaseHelper.getAllQuestionsList();//get list from database again
 

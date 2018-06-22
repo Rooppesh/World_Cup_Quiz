@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);//int flag, int mask
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.main);
         user=(EditText)findViewById(R.id.input_email);
         pass= (EditText)findViewById(R.id.input_password);
         db = new DBHelper(this);
