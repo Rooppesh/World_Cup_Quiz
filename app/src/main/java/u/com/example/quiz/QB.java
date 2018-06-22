@@ -44,12 +44,10 @@ public class QB {
                     new String[]{"Cameroon", "Eygpt", "South Africa", "Tunisia"}, "Eygpt"));
             myDataBaseHelper.addInitialQuestion(new Question("Which country won most World cups?",
                     new String[]{"Argentina", "Brazil", "Germany", "Italy"}, "Brazil"));
-            myDataBaseHelper.addInitialQuestion(new Question("\n" +
-                    "Where was the first World cup held?",
+            myDataBaseHelper.addInitialQuestion(new Question("Where was the first World cup held?",
                     new String[]{"Argentina", "Brazil", "England", "Uruguay"}, "Uruguay"));
             myDataBaseHelper.addInitialQuestion(new Question("World cup was never held in one of these continents",
-                    new String[]{"Africa", "Asia", "Australia/Oceania", "\n" +
-                            "North America"}, "Australia/Oceania"));
+                    new String[]{"Africa", "Asia", "Australia/Oceania", "North America"}, "Australia/Oceania"));
             myDataBaseHelper.addInitialQuestion(new Question("One of these South American teams never became a world champion",
                     new String[]{"Brazil", "Argentina", "Chile", "Uruguay"}, "Chile"));
 
