@@ -5,9 +5,9 @@ Since, it's World Cup season and CTF wanted us to make a Quiz App.
 <b>Login:</b> <br />
 <img src="https://github.com/Rooppesh/World_Cup_Quiz/blob/master/Screenshots/Login.jpg" height="426.666666667" width="240">
 <br />
-Signup: <br />
+<b>Signup: </b><br />
 <img src="https://github.com/Rooppesh/World_Cup_Quiz/blob/master/Screenshots/Signup.jpg" height="426.666666667" width="240">
 <br />
-Dashboard: <br />
+<b>Dashboard:</b> <br />
 <img src="https://github.com/Rooppesh/World_Cup_Quiz/blob/master/Screenshots/Dashboard.jpg" height="426.666666667" width="240">
 <br />
