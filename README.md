@@ -1,7 +1,14 @@
 # World_Cup_Quiz
 Since, it's World Cup season and CTF wanted us to make a Quiz App. 
 <br />
-## Screenshots
+## Specification
+```
+minSdkVersion 22
+```
+```
+targetSdkVersion 27
+```
+## Screenshot
 <b>Login:</b> <br />
 <img src="https://github.com/Rooppesh/World_Cup_Quiz/blob/master/Screenshots/Login1.jpg" height="426.666666667" width="240">
 <br />
