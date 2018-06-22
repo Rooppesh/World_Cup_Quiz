@@ -6,10 +6,10 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-public class DatabaseHelper extends SQLiteOpenHelper{
+public class DBHelper extends SQLiteOpenHelper{
 
 
-    public DatabaseHelper(Context context) {
+    public DBHelper(Context context) {
         super(context,"Login.db", null ,1);
     }
 

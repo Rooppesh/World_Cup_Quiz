@@ -5,11 +5,11 @@ import android.content.Context;
 import java.util.ArrayList;
 import java.util.List;
 
-public class QuestionBankCric {
+public class QB {
 
     // declare list of Question objects
     List <Question> list = new ArrayList<>();
-    MyDataBaseHelperCric myDataBaseHelper;
+    DBWorldCup myDataBaseHelper;
 
     // method returns number of questions in list
     public int getLength(){
@@ -36,7 +36,7 @@ public class QuestionBankCric {
 
 
     public void initQuestions(Context context) {
-        myDataBaseHelper = new MyDataBaseHelperCric(context);
+        myDataBaseHelper = new DBWorldCup(context);
         list = myDataBaseHelper.getAllQuestionsList();//get questions/choices/answers from database
 
         if (list.isEmpty()) {//if list is empty, populate database with default questions/choices/answers

@@ -13,8 +13,8 @@ import android.widget.Toast;
 
 
 
-public class Tab1Fragment extends Fragment {
-    private static final String TAG = "Tab1Fragment";
+public class Frag extends Fragment {
+    private static final String TAG = "Frag";
 
 
     private Button btnTEST;

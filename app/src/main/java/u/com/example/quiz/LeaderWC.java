@@ -2,16 +2,13 @@ package u.com.example.quiz;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.preference.Preference;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
-public class TopScorerCric extends AppCompatActivity {
+public class LeaderWC extends AppCompatActivity {
     public int first,second,third;
     public String name = "Bhargav";
     Button loga,dashback,rank;
@@ -19,7 +16,7 @@ public class TopScorerCric extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         Log.d("CDA", "onBackPressed Called");
-        Intent setIntent = new Intent(getApplicationContext(),QuizDashboard.class);
+        Intent setIntent = new Intent(getApplicationContext(),Dash.class);
         startActivity(setIntent);
     }
 
@@ -90,7 +87,7 @@ public class TopScorerCric extends AppCompatActivity {
         rank.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),QuizDashboard.class);
+                Intent i = new Intent(getApplicationContext(),Dash.class);
                 startActivityForResult(i,1);
             }
         });

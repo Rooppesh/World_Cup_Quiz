@@ -12,7 +12,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="#000000"
     android:orientation="vertical"
-    tools:context=".TopScorerCric">
+    tools:context=".LeaderWC">
 
 
 

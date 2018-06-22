@@ -1,6 +1,6 @@
 package u.com.example.quiz;
 
-public class User {
+public class Profile {
     public int id;
     public String name;
     public String email,password;

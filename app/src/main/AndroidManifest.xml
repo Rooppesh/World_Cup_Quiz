@@ -16,17 +16,17 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".QuizDashboard" />
-        <activity android:name=".CricketQuiz" />
-        <activity android:name=".TopScorerCric" />
+        <activity android:name=".Dash" />
+        <activity android:name=".Quiz" />
+        <activity android:name=".LeaderWC" />
         <activity
             android:name=".Main2Activity"
             android:label="@string/title_activity_main2"
-            android:parentActivityName=".QuizDashboard"
+            android:parentActivityName=".Dash"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="u.com.example.quiz.QuizDashboard" />
+                android:value="u.com.example.quiz.Dash" />
         </activity>
     </application>
 

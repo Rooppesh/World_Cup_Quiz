@@ -1,6 +1,5 @@
 package u.com.example.quiz;
 
-import android.app.Application;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
@@ -15,12 +14,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class RegisterActivity extends AppCompatActivity{
-    DatabaseHelper db;
+    DBHelper db;
     EditText name1,p1,pass1;
     Button register;
     public TextView log;
     protected void onCreate(Bundle savedInstanceState) {
-        Log.d("in reg","vandhuduchu");
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         //code that displays the content in full screen mode
@@ -28,7 +26,7 @@ public class RegisterActivity extends AppCompatActivity{
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);//int flag, int mask
 
         setContentView(R.layout.activity_register);
-        db = new DatabaseHelper(this);
+        db = new DBHelper(this);
         name1= (EditText)findViewById(R.id.input_name);
         p1=(EditText)findViewById(R.id.input_password2);
         pass1=(EditText)findViewById(R.id.input_password1);

@@ -11,10 +11,10 @@ import java.util.List;
 
 // class to provide operations with database
 
-public class MyDataBaseHelper extends SQLiteOpenHelper {
+public class DBWorldCup extends SQLiteOpenHelper {
 
     // Database name
-    public static String DATABASE_QUESTION = "questionBank4.db";
+    public static String DATABASE_QUESTION = "questionBank5.db";
     // Current version of database
     private static final int DATABASE_VERSION = 1;
     // Database table name
@@ -35,7 +35,7 @@ public class MyDataBaseHelper extends SQLiteOpenHelper {
             + CHOICE1 + " TEXT, " + CHOICE2 + " TEXT, " + CHOICE3 + " TEXT, "
             + CHOICE4 + " TEXT, " + ANSWER + " TEXT);";
 
-    public MyDataBaseHelper(Context context) {
+    public DBWorldCup(Context context) {
         super(context, DATABASE_QUESTION, null, DATABASE_VERSION);
     }
 
@@ -120,4 +120,3 @@ public class MyDataBaseHelper extends SQLiteOpenHelper {
         return questionArrayList;
     }
 }
-

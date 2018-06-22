@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     public EditText pass;
     public Button login;
     public TextView regis;
-    public DatabaseHelper db;
+    public DBHelper db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         user=(EditText)findViewById(R.id.input_email);
         pass= (EditText)findViewById(R.id.input_password);
-        db = new DatabaseHelper(this);
+        db = new DBHelper(this);
         regis = (TextView)findViewById(R.id.link_signup);
         regis.setPaintFlags(regis.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         regis.setOnClickListener(new View.OnClickListener() {
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                     editor1.commit();
                     String ko = mypref.getString("username","a");
                     Log.d("here",ko);
-                    Intent i = new Intent(getApplicationContext(),QuizDashboard.class);
+                    Intent i = new Intent(getApplicationContext(),Dash.class);
                     startActivityForResult(i,1);
                 }
 

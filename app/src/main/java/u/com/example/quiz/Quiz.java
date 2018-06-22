@@ -1,16 +1,11 @@
 package u.com.example.quiz;
 
-import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -19,8 +14,8 @@ import android.widget.Toast;
 import com.github.lzyzsd.circleprogress.DonutProgress;
 
 
-public class CricketQuiz extends AppCompatActivity {
-    private QuestionBankCric mQuestionLibrary = new QuestionBankCric();
+public class Quiz extends AppCompatActivity {
+    private QB mQuestionLibrary = new QB();
     public CountDownTimer t;
 
     private TextView mScoreView;   // view for current total score
@@ -66,8 +61,7 @@ public class CricketQuiz extends AppCompatActivity {
             public void onFinish() {
                 updateScore(mScore);
                 //donutProgress.setProgress(0);
-                Toast.makeText(getApplicationContext(), "Time Up!", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getApplicationContext(), TopScorerCric.class);
+                Intent intent = new Intent(getApplicationContext(), LeaderWC.class);
                 intent.putExtra("score", mScore); // pass the current score to the second screen
                 startActivity(intent);
 
@@ -92,7 +86,7 @@ public class CricketQuiz extends AppCompatActivity {
             mQuestionNumber++;
         }
         else {
-            Intent intent = new Intent(getApplicationContext(), TopScorerCric.class);
+            Intent intent = new Intent(getApplicationContext(), LeaderWC.class);
             intent.putExtra("score", mScore); // pass the current score to the second screen
             startActivity(intent);
             t.cancel();
@@ -110,7 +104,7 @@ public class CricketQuiz extends AppCompatActivity {
             mScore = mScore + 1;
             Toast.makeText(getApplicationContext(), "Correct!", Toast.LENGTH_SHORT).show();
         }else {
-            Toast.makeText(getApplicationContext(), "Wrong! " + mAnswer + " is the correct answer.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Wrong! ", Toast.LENGTH_SHORT).show();
         }// show current total score for the user
         updateScore(mScore);
         // once user answer the question, we move on to the next one, if any

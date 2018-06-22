@@ -7,10 +7,8 @@ import android.support.v7.widget.CardView;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.ImageView;
 
-public class QuizDashboard extends AppCompatActivity {
+public class Dash extends AppCompatActivity {
 
     public CardView cric,tech,topscore;
     @Override
@@ -27,7 +25,7 @@ public class QuizDashboard extends AppCompatActivity {
         cric.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),CricketQuiz.class);
+                Intent i = new Intent(getApplicationContext(),Quiz.class);
                 startActivityForResult(i,1);
 
             }
