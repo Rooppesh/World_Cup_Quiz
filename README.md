@@ -20,6 +20,9 @@ targetSdkVersion 27
 <b>Dashboard:</b> <br />
 <img src="https://github.com/Rooppesh/World_Cup_Quiz/blob/master/Screenshots/Dashboard1.jpg" height="426.666666667" width="240">
 <br />
+<b>Quiz:</b> <br />
+<img src="https://github.com/Rooppesh/World_Cup_Quiz/blob/master/Screenshots/Quiz.jpg" height="426.666666667" width="240">
+<br />
 <b>Score:</b> <br />
 <img src="https://github.com/Rooppesh/World_Cup_Quiz/blob/master/Screenshots/Score.jpg" height="426.666666667" width="240">
 <br />
